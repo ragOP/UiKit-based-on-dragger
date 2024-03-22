@@ -303,7 +303,7 @@ useEffect(() => {
 				<div className='terms'>Terms & Conditions | Privacy Policy</div>
 				<div className='copyright'>Copyright © 2022 - All right reserved Daily America Savings.</div>
 			</div>
-			<ToastContainer
+{/* 			<ToastContainer
         position="bottom-right"
         autoClose={5000}
         newestOnTop={false}
@@ -312,7 +312,7 @@ useEffect(() => {
         pauseOnFocusLoss
         draggable
         pauseOnHover
-      />
+      /> */}
 		</div>
     )
 } 
