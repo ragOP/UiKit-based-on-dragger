@@ -136,36 +136,36 @@ export default function Third_SP() {
 // 		});
 // };
 
-useEffect(() => {
-		const delayedEffect = setTimeout(() => {
-				// Create a function to handle the logic
-				const showRandomToast = () => {
-						const randomTime = 6000;
-						const randomMessage =
-								messages[Math.floor(Math.random() * messages.length)];
-						notify(randomMessage);
-						return randomTime;
-				};
+// useEffect(() => {
+// 		const delayedEffect = setTimeout(() => {
+// 				// Create a function to handle the logic
+// 				const showRandomToast = () => {
+// 						const randomTime = 6000;
+// 						const randomMessage =
+// 								messages[Math.floor(Math.random() * messages.length)];
+// 						// notify(randomMessage);
+// 						return randomTime;
+// 				};
 				
-				// Show the first toast
-				let nextTime = showRandomToast();
+// 				// Show the first toast
+// 				let nextTime = showRandomToast();
 
-				// Set up a recurring timer
-				const timer = setInterval(() => {
-						nextTime = showRandomToast();
-				}, nextTime);
+// 				// Set up a recurring timer
+// 				const timer = setInterval(() => {
+// 						nextTime = showRandomToast();
+// 				}, nextTime);
 
-				// Cleanup
-				return () => {
-						clearInterval(timer);
-				};
-		}, 6000); // 6-second delay before the useEffect code runs
+// 				// Cleanup
+// 				return () => {
+// 						clearInterval(timer);
+// 				};
+// 		}, 6000); // 6-second delay before the useEffect code runs
 
-		// Cleanup for the setTimeout
-		return () => {
-				clearTimeout(delayedEffect);
-		};
-}, []);
+// 		// Cleanup for the setTimeout
+// 		return () => {
+// 				clearTimeout(delayedEffect);
+// 		};
+// }, []);
 
 
 	useEffect(() => {
