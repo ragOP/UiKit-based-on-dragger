@@ -717,3 +717,16 @@ a{
       line-height: 1.25rem;
     }
   }
+  .bold-green-toast {
+    font-weight: bold;
+    color: green;
+  }
+  
+  .green-bold {
+    color: rgb(34, 197, 94);
+    font-weight: bold;
+  }
+  .call-btn {
+    -webkit-animation: glow 1.5s infinite alternate;
+    animation: glow 1.5s infinite alternate
+  }
