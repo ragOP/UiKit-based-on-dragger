@@ -533,6 +533,19 @@ a{
     margin: 1rem 0;
     cursor: pointer;
   }
+
+
+  @keyframes glow {
+    0% {
+        box-shadow: 0 0 5px #34C759, 0 0 10px #34C759;
+    }
+    50% {
+        box-shadow: 0 0 10px #34C759, 0 0 20px #34C759;
+    }
+    100% {
+        box-shadow: 0 0 5px #34C759, 0 0 10px #34C759;
+    }
+}
   
   .sub-title{
     font-size: 1.25rem;
@@ -727,6 +740,6 @@ a{
     font-weight: bold;
   }
   .call-btn {
-    -webkit-animation: glow 1.5s infinite alternate;
+    -webkit-animation:  1.5s infinite alternate;
     animation: glow 1.5s infinite alternate
   }
