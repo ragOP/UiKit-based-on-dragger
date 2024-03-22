@@ -84,11 +84,11 @@ export default function Third_SP() {
 		}
 	}
 	const messages = [
-		"Alejandro Sánchez from Miami, FL acaba de calificar para $37,621 en Alivio de Deuda.",
-		"Sofia García from Los Angeles, CA acaba de calificar para $28,945 en Alivio de Deuda.",
-		"Mateo López from San Antonio, TX acaba de calificar para $45,213 en Alivio de Deuda.",
-		"Valentina Hernández from Albuquerque, NM acaba de calificar para $21,874 en Alivio de Deuda.",
-		"Diego Martínez from Phoenix, AZ acaba de calificar para $34,567 en Alivio de Deuda"
+		"Juan M. García de San Juan, PR acaba de calificar para la Tarjeta Flex de $3,600.",
+		"María S. Martínez de Albuquerque, NM acaba de calificar para la Tarjeta Flex de $3,600.",
+		"Carlos R. López de El Paso, TX acaba de calificar para la Tarjeta Flex de $3,600.",
+		"Ana C. Ramírez de Miami, FL acaba de calificar para la Tarjeta Flex de $3,600.",
+		"Javier F. González de Los Angeles, CA acaba de calificar para la Tarjeta Flex de $3,600."
 ];
 
 // Function to shuffle array in place
@@ -109,25 +109,9 @@ const notify = (message:any) => {
 
 		// Make the word "Allowance" bold in all lines
 		boldedMessage = boldedMessage.replace(
-				/\$37,621 en Alivio de Deuda/g,
-				'<strong class="green-bold">$37,621 en Alivio de Deuda.</strong>'
+				/\$3,600./g,
+				'<strong class="green-bold">$3,600.</strong>'
 		);
-		boldedMessage = boldedMessage.replace(
-			/\$28,945 en Alivio de Deuda./g,
-			'<strong class="green-bold">$28,945 en Alivio de Deuda.</strong>'
-	);
-	boldedMessage = boldedMessage.replace(
-		/\$45,213 en Alivio de Deuda./g,
-		'<strong class="green-bold">$45,213 en Alivio de Deuda.</strong>'
-);
-boldedMessage = boldedMessage.replace(
-	/\$21,874 en Alivio de Deuda./g,
-	'<strong class="green-bold">$21,874 en Alivio de Deuda.</strong>'
-);
-boldedMessage = boldedMessage.replace(
-	/\$34,567 en Alivio de Deuda/g,
-	'<strong class="green-bold">$34,567 en Alivio de Deuda</strong>'
-);
 
 		// Make specific dollar amounts bold only in specific lines
 		const specialAmounts = ["$16,800", "$16,800", "$16,800", "$16,800"];
