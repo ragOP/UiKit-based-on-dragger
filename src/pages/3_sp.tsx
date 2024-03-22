@@ -83,58 +83,58 @@ export default function Third_SP() {
 			}, 1000)
 		}
 	}
-	const messages = [
-		"Juan M. García de San Juan, PR acaba de calificar para la Tarjeta Flex de $3,600.",
-		"María S. Martínez de Albuquerque, NM acaba de calificar para la Tarjeta Flex de $3,600.",
-		"Carlos R. López de El Paso, TX acaba de calificar para la Tarjeta Flex de $3,600.",
-		"Ana C. Ramírez de Miami, FL acaba de calificar para la Tarjeta Flex de $3,600.",
-		"Javier F. González de Los Angeles, CA acaba de calificar para la Tarjeta Flex de $3,600."
-];
+// 	const messages = [
+// 		"Juan M. García de San Juan, PR acaba de calificar para la Tarjeta Flex de $3,600.",
+// 		"María S. Martínez de Albuquerque, NM acaba de calificar para la Tarjeta Flex de $3,600.",
+// 		"Carlos R. López de El Paso, TX acaba de calificar para la Tarjeta Flex de $3,600.",
+// 		"Ana C. Ramírez de Miami, FL acaba de calificar para la Tarjeta Flex de $3,600.",
+// 		"Javier F. González de Los Angeles, CA acaba de calificar para la Tarjeta Flex de $3,600."
+// ];
 
 // Function to shuffle array in place
-const shuffleArray = (array:any) => {
-		for (let i = array.length - 1; i > 0; i--) {
-				const j = Math.floor(Math.random() * (i + 1));
-				[array[i], array[j]] = [array[j], array[i]];
-		}
-};
+// const shuffleArray = (array:any) => {
+// 		for (let i = array.length - 1; i > 0; i--) {
+// 				const j = Math.floor(Math.random() * (i + 1));
+// 				[array[i], array[j]] = [array[j], array[i]];
+// 		}
+// };
 
-shuffleArray(messages);
+// shuffleArray(messages);
 
-const notify = (message:any) => {
-		// Dismiss all existing toasts
-		toast.dismiss();
-		let boldedMessage = message;
+// const notify = (message:any) => {
+// 		// Dismiss all existing toasts
+// 		toast.dismiss();
+// 		let boldedMessage = message;
 
 
-		// Make the word "Allowance" bold in all lines
-		boldedMessage = boldedMessage.replace(
-				/\$3,600./g,
-				'<strong class="green-bold">$3,600.</strong>'
-		);
+// 		// Make the word "Allowance" bold in all lines
+// 		boldedMessage = boldedMessage.replace(
+// 				/\$3,600./g,
+// 				'<strong class="green-bold">$3,600.</strong>'
+// 		);
 
-		// Make specific dollar amounts bold only in specific lines
-		const specialAmounts = ["$16,800", "$16,800", "$16,800", "$16,800"];
-		specialAmounts.forEach((amount) => {
-				if (message.includes(amount)) {
-						boldedMessage = boldedMessage.replace(
-								amount,
-								`<strong class="green-bold">${amount}</strong>`
-						);
-				}
-		});
+// 		// Make specific dollar amounts bold only in specific lines
+// 		const specialAmounts = ["$16,800", "$16,800", "$16,800", "$16,800"];
+// 		specialAmounts.forEach((amount) => {
+// 				if (message.includes(amount)) {
+// 						boldedMessage = boldedMessage.replace(
+// 								amount,
+// 								`<strong class="green-bold">${amount}</strong>`
+// 						);
+// 				}
+// 		});
 
 		// Show new toast
-		toast(<div dangerouslySetInnerHTML={{ __html: boldedMessage }} />, {
-				position: "bottom-right",
-				autoClose: 5000,
-				hideProgressBar: true,
-				closeOnClick: false,
-				pauseOnHover: true,
-				draggable: true,
-				closeButton: false,
-		});
-};
+// 		toast(<div dangerouslySetInnerHTML={{ __html: boldedMessage }} />, {
+// 				position: "bottom-right",
+// 				autoClose: 5000,
+// 				hideProgressBar: true,
+// 				closeOnClick: false,
+// 				pauseOnHover: true,
+// 				draggable: true,
+// 				closeButton: false,
+// 		});
+// };
 
 useEffect(() => {
 		const delayedEffect = setTimeout(() => {
@@ -254,13 +254,13 @@ useEffect(() => {
 
     return(
         <div>
-									<ToastContainer />
+{/* 									<ToastContainer /> */}
 			<div className='top-sticky-blue' id='top'>My Senior Saving Journal</div>
 			{step==="process"?
 				<>
 				<div className='main-container-5'>
 					<div className='main-descrition-5'>
-						<div className='main-des-title'>Los estadounidenses mayores de 64 años ahora pueden calificar para la tarjeta FLEX de $3600 en 2024. ¡Así es como!</div>
+						<div className='main-des-title'>2Los estadounidenses mayores de 64 años ahora pueden calificar para la tarjeta FLEX de $3600 en 2024. ¡Así es como!</div>
 						<img className='topic-img-5' src = {Head_bg} alt = "head"/>
 						<div className='main-des-5'>Los estadounidenses mayores de 64 años pueden precalificar para la tarjeta Flex Spending Card 2024 que les otorga hasta $3600. Las personas mayores pueden usar los fondos para servicios dentales o de la vista, comestibles, alquiler, facturas de servicios públicos, medicamentos y más.</div>
 						<div className='main-des-5' style = {{marginTop:"1rem"}}><b>La oportunidad de actualizar sus beneficios finaliza el 31 de marzo</b> por lo tanto, es mejor llamar y bloquear su Tarjeta Flex mientras aún esté disponible.</div>
