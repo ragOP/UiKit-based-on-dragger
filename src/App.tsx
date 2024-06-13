@@ -14,6 +14,7 @@ function App() {
         
      
         <Route index element={<Third_SP />} />
+        <Route path='eng1' element={<Third_SP />} />
         
         
         </Routes>
