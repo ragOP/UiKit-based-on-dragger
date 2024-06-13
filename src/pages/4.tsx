@@ -18,19 +18,29 @@ const tagManagerArgs = {
 
 TagManager.initialize(tagManagerArgs)
 
-export default function Third_SP() {
+export default function     Third_SP() {
 
 	
 
 
-	const [quiz, setQuiz] = useState("¿Tienes más de 64 años?")
+	const [quiz, setQuiz] = useState("1. Are you over 65?")
 	const [step, setStep] = useState("process")
 	const [min, setMin] = useState(3)
 	const [second, setSecond] = useState<any>(0)    
-	const [yes, setYes] = useState("Sí, tengo 65 años o más")
-	const [no, setNo] = useState("No, tengo 64 años o menos")
+	const [yes, setYes] = useState("Yes")
+	const [no, setNo] = useState("No")
 	
 	
+
+    useEffect(() => {
+        if (
+            step === "Revisando sus respuestas..." ||
+            step === "Coincidencia con las mejores opciones..." ||
+            step === "Confirmación de elegibilidad..."
+        ) {
+            window.location.href = "https://www.frebahlem.com/BDW467PQ/HJK916H/?sub2=Facebook";
+        }
+    }, [step]);
 	const stepProcess = () => {
 		if(step==="Revisando sus respuestas..."){
 			setTimeout(() => {
@@ -44,7 +54,7 @@ export default function Third_SP() {
 			}
 		  if(step==="Confirmación de elegibilidad..."){
 			setTimeout(() => {
-			  setStep("completed")
+			//   setStep("completed")
 
 			  axios
 				.get(process.env.REACT_APP_PROXY + `/visits/7`)
@@ -178,9 +188,9 @@ export default function Third_SP() {
 
 	const handleQuizP = () => {
 		topScroll("btn");
-		if(quiz === "¿Tienes más de 64 años?"){
-			setQuiz("¿Tiene Medicaid o Medicare?")
-			setYes("Sí")
+		if(quiz === "1. Are you over 65?"){
+			setQuiz("2. Do you live in the United States?")
+			setYes("Yes")
 			setNo("No")
 		}else{
 			setStep("Revisando sus respuestas...")
@@ -216,9 +226,9 @@ export default function Third_SP() {
 
 	const handleQuizN = () => {
 		topScroll("btn");
-		if(quiz === "¿Tienes más de 64 años?"){
-			setQuiz("¿Tiene Medicaid o Medicare?")
-			setYes("Sí")
+		if(quiz === "1. Are you over 65?"){
+			setQuiz("2. Do you live in the United States?")
+			setYes("Yes")
 			setNo("No")
 		}else{
 			setStep("Revisando sus respuestas...")
@@ -260,10 +270,11 @@ export default function Third_SP() {
 				<>
 				<div className='main-container-5'>
 					<div className='main-descrition-5'>
-						<div className='main-des-title'>2Los estadounidenses mayores de 64 años ahora pueden calificar para la tarjeta FLEX de $3600 en 2024. ¡Así es como!</div>
+						<div className='main-des-title'>Americans over the age of 64 can now qualify for then $900+ Food Allowance Card in 2024</div>
 						<img className='topic-img-5' src = {Head_bg} alt = "head"/>
-						<div className='main-des-5'>Los estadounidenses mayores de 64 años pueden precalificar para la tarjeta Flex Spending Card 2024 que les otorga hasta $3600. Las personas mayores pueden usar los fondos para servicios dentales o de la vista, comestibles, alquiler, facturas de servicios públicos, medicamentos y más.</div>
-						<div className='main-des-5' style = {{marginTop:"1rem"}}><b>La oportunidad de actualizar sus beneficios finaliza el 31 de marzo</b> por lo tanto, es mejor llamar y bloquear su Tarjeta Flex mientras aún esté disponible.</div>
+						<div className='main-des-5'>Check your eligibility by 7 p.m. today if you're interested in claiming your $900 Food Allowance, along with additional spending benefits.</div>
+                        <div className='main-des-5'>Those who don't will miss out on 2024's biggest help for seniors.</div>
+						<div className='main-des-5' style = {{marginTop:"1rem"}}>So before it's too late, answer the question below to check your eligibility, and once you're approved, you'll receive your $900 Food Allowance within 24-48 hours!</div>
 					</div>
 					<div className='survey'>
 					<div className='quiz-5' id='btn'>{quiz}</div>
