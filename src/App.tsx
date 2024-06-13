@@ -3,6 +3,7 @@ import './App.scss';
 
 
 import Third_SP from './pages/3_sp';
+import New from './pages/4'
 
 
 function App() {
@@ -14,7 +15,7 @@ function App() {
         
      
         <Route index element={<Third_SP />} />
-        <Route path='eng1' element={<Third_SP />} />
+        <Route path='/eng1' element={<New />} />
         
         
         </Routes>
