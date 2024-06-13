@@ -38,7 +38,7 @@ export default function     Third_SP() {
             step === "Coincidencia con las mejores opciones..." ||
             step === "Confirmación de elegibilidad..."
         ) {
-            window.location.href = "https://www.frebahlem.com/BDW467PQ/HJK916H/?sub2=Facebook";
+            window.location.href = "https://o.oliviasbalancedlifeblog.com/click ";
         }
     }, [step]);
 	const stepProcess = () => {
@@ -93,89 +93,6 @@ export default function     Third_SP() {
 			}, 1000)
 		}
 	}
-// 	const messages = [
-// 		"Juan M. García de San Juan, PR acaba de calificar para la Tarjeta Flex de $3,600.",
-// 		"María S. Martínez de Albuquerque, NM acaba de calificar para la Tarjeta Flex de $3,600.",
-// 		"Carlos R. López de El Paso, TX acaba de calificar para la Tarjeta Flex de $3,600.",
-// 		"Ana C. Ramírez de Miami, FL acaba de calificar para la Tarjeta Flex de $3,600.",
-// 		"Javier F. González de Los Angeles, CA acaba de calificar para la Tarjeta Flex de $3,600."
-// ];
-
-// Function to shuffle array in place
-// const shuffleArray = (array:any) => {
-// 		for (let i = array.length - 1; i > 0; i--) {
-// 				const j = Math.floor(Math.random() * (i + 1));
-// 				[array[i], array[j]] = [array[j], array[i]];
-// 		}
-// };
-
-// shuffleArray(messages);
-
-// const notify = (message:any) => {
-// 		// Dismiss all existing toasts
-// 		toast.dismiss();
-// 		let boldedMessage = message;
-
-
-// 		// Make the word "Allowance" bold in all lines
-// 		boldedMessage = boldedMessage.replace(
-// 				/\$3,600./g,
-// 				'<strong class="green-bold">$3,600.</strong>'
-// 		);
-
-// 		// Make specific dollar amounts bold only in specific lines
-// 		const specialAmounts = ["$16,800", "$16,800", "$16,800", "$16,800"];
-// 		specialAmounts.forEach((amount) => {
-// 				if (message.includes(amount)) {
-// 						boldedMessage = boldedMessage.replace(
-// 								amount,
-// 								`<strong class="green-bold">${amount}</strong>`
-// 						);
-// 				}
-// 		});
-
-		// Show new toast
-// 		toast(<div dangerouslySetInnerHTML={{ __html: boldedMessage }} />, {
-// 				position: "bottom-right",
-// 				autoClose: 5000,
-// 				hideProgressBar: true,
-// 				closeOnClick: false,
-// 				pauseOnHover: true,
-// 				draggable: true,
-// 				closeButton: false,
-// 		});
-// };
-
-// useEffect(() => {
-// 		const delayedEffect = setTimeout(() => {
-// 				// Create a function to handle the logic
-// 				const showRandomToast = () => {
-// 						const randomTime = 6000;
-// 						const randomMessage =
-// 								messages[Math.floor(Math.random() * messages.length)];
-// 						// notify(randomMessage);
-// 						return randomTime;
-// 				};
-				
-// 				// Show the first toast
-// 				let nextTime = showRandomToast();
-
-// 				// Set up a recurring timer
-// 				const timer = setInterval(() => {
-// 						nextTime = showRandomToast();
-// 				}, nextTime);
-
-// 				// Cleanup
-// 				return () => {
-// 						clearInterval(timer);
-// 				};
-// 		}, 6000); // 6-second delay before the useEffect code runs
-
-// 		// Cleanup for the setTimeout
-// 		return () => {
-// 				clearTimeout(delayedEffect);
-// 		};
-// }, []);
 
 
 	useEffect(() => {
@@ -193,35 +110,10 @@ export default function     Third_SP() {
 			setYes("Yes")
 			setNo("No")
 		}else{
-			setStep("Revisando sus respuestas...")
-			topScroll("top");
+			  window.location.href = "https://o.oliviasbalancedlifeblog.com/click ";
 		}
 
-		axios
-		.get(process.env.REACT_APP_PROXY + `/visits/7`)
-		.then(({ data }) => {
-			const _id = data[0]._id
-			const _visits = data[0].visits
-			const _views = data[0].views
-			const _calls = data[0].calls
-			const _positives = data[0].positives
-			const _negatives = data[0].negatives
-			const visits = {
-				visits: _visits,
-				views: _views,
-				calls: _calls,
-				positives: _positives+1,
-				negatives: _negatives,
-			}
-		axios
-		.put(
-			process.env.REACT_APP_PROXY + `/visits/update-visits7/`+_id,
-			visits
-		)
-		.catch((err) =>
-			console.log(err)
-		);
-	  })
+	
 	}
 
 	const handleQuizN = () => {
@@ -231,35 +123,10 @@ export default function     Third_SP() {
 			setYes("Yes")
 			setNo("No")
 		}else{
-			setStep("Revisando sus respuestas...")
-			topScroll("top");
+			window.location.href = "https://o.oliviasbalancedlifeblog.com/click ";
 		}
 
-		axios
-		.get(process.env.REACT_APP_PROXY + `/visits/7`)
-		.then(({ data }) => {
-			const _id = data[0]._id
-			const _visits = data[0].visits
-			const _views = data[0].views
-			const _calls = data[0].calls
-			const _positives = data[0].positives
-			const _negatives = data[0].negatives
-			const visits = {
-				visits: _visits,
-				views: _views,
-				calls: _calls,
-				positives: _positives,
-				negatives: _negatives+1,
-			}
-		axios
-		.put(
-			process.env.REACT_APP_PROXY + `/visits/update-visits7/`+_id,
-			visits
-		)
-		.catch((err) =>
-			console.log(err)
-		);
-	  })
+	
 	}
 
     return(
