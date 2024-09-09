@@ -14,8 +14,8 @@ function App() {
         <Routes>
         
      
-        <Route index element={<Third_SP />} />
-        <Route path='/eng1' element={<New />} />
+{/*         <Route index element={<Third_SP />} /> */}
+{/*         <Route path='/eng1' element={<New />} /> */}
         
         
         </Routes>
